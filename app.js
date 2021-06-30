@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
 const socioRouter = require('./socioRouter');
 
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.use('/', socioRouter);
 
-app.listen(3000, () => {
+app.listen(port, () => {
 
   console.log(`Servidor Node.js em execução...`)
 
