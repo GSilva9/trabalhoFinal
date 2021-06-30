@@ -11,6 +11,16 @@ const jwt = require('jsonwebtoken');
 const SECRET = 'socioapi123';
 const bcrypt = require('bcrypt');
 
+router.get('/', async (req, res) => {
+  
+    try {
+      const socio = await knex('socio').orderBy('id_socio','desc')
+      res.status(200).json(socio);
+    } catch (error) {
+      res.status(400).json({ msg: error.message});
+    }
+})
+
 router.get('/socio', async (req, res) => {
   
     try {
