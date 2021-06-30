@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`socio` (
   `nome` VARCHAR(150) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
   `senha` VARCHAR(60) NOT NULL,
-  `endereco_logradouro` VARCHAR(200),
   `endereco_numero` VARCHAR(8) NOT NULL,
   `endereco_cep` VARCHAR(10) NOT NULL,
   `email` VARCHAR(45) NOT NULL UNIQUE,
